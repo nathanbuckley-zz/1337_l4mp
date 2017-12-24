@@ -12,7 +12,7 @@
 
 #define PIN  5
 #define NUMPIXELS  12
-#define DBG_OUT Serial
+#define DBG_OUTPUT_PORT Serial //Here for note. to be removed after initial write to just serial for easier reading and understanding
 
 ESP8266WebServer server(1337);
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);

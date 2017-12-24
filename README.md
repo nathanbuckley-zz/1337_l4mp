@@ -14,5 +14,6 @@ The Goal:
 - [ ]  Ability to add additional security ???
 - [ ]  Make it easy to install in any lamp project
 - [ ]  A Natral Light Alarm function (Slowly Brightens a white light to promote natral rising)
+- [ ] Standalone PCB version for devs and easier / more reliable implimentation  
 
 
