@@ -21,6 +21,7 @@ const char* ssid = "*********";
 const char* password = "*********";
 const char* host = "l337_l4mp";
 
+//Function for standard LOADING... pattern
 void ledPatternLoadBlue() {
   for (int i = 0; i < NUMPIXELS; i++) {
     pixels.setPixelColor(i, pixels.Color(106, 90, 205)); //On Light purple
@@ -34,6 +35,7 @@ void ledPatternLoadBlue() {
   }
 }
 
+// Function for standard LOADED Light pattern
 void ledPatternLoaded(){
   for(int i=0; i < 3; i++){
     pixels.setPixelColor(0, pixels.Color(106, 90, 205));
@@ -55,8 +57,9 @@ void ledPatternLoaded(){
   }
 }
 
+//Function for cylon pattern
 void ledPatternCylon(){
-  
+
 }
 
 

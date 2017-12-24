@@ -8,6 +8,7 @@
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
+//Function for standard LOADING... pattern
 void loadBlueX4() {
   for(int i = 0; i < 4; i++){
     for (int i = 0; i < NUMPIXELS; i++) {
@@ -23,6 +24,7 @@ void loadBlueX4() {
   }
 }
 
+// Function for standard LOADED Light pattern
 void ledLoaded(){
   for(int i=0; i < 3; i++){
     pixels.setPixelColor(0, pixels.Color(106, 90, 205));

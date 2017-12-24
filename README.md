@@ -7,7 +7,7 @@ l337_l4mp
 
 The Goal:
 
-- [ ]  Must be powered over a USB connection
+- [x]  Must be powered over a USB connection
 - [ ]  Have a full web interface hoseted on an SD card
 - [ ]  Easy To configure and setup webserver
 - [ ]  Only accessable localy for security
