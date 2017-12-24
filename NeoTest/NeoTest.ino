@@ -1,5 +1,5 @@
 /*
-*
+* A simple scrip to run some l337_l4mp patterns in sequance to test your neopixl ring.
 */
 #include <Adafruit_NeoPixel.h>
 
@@ -9,7 +9,6 @@
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 void loadBlueX4() {
-
   for(int i = 0; i < 4; i++){
     for (int i = 0; i < NUMPIXELS; i++) {
       pixels.setPixelColor(i, pixels.Color(106, 90, 205)); //On Light purple
@@ -48,7 +47,6 @@ void ledLoaded(){
 
 void setup() {
   pixels.begin(); // This initializes the NeoPixel library.
-
 }
 
 void loop() {
