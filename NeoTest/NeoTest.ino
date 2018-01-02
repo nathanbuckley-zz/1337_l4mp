@@ -35,12 +35,6 @@ void ledLoaded(){
     pixels.setPixelColor(10, pixels.Color(106, 90, 205));
     pixels.show();
     delay(80);
-    pixels.setPixelColor(0, pixels.Color(0, 0, 0));
-    pixels.setPixelColor(2, pixels.Color(0, 0, 0));
-    pixels.setPixelColor(4, pixels.Color(0, 0, 0));
-    pixels.setPixelColor(6, pixels.Color(0, 0, 0));
-    pixels.setPixelColor(8, pixels.Color(0, 0, 0));
-    pixels.setPixelColor(10, pixels.Color(0, 0, 0));
     pixels.show();
     delay(80);
   }
@@ -49,6 +43,7 @@ void ledLoaded(){
 
 void setup() {
   pixels.begin(); // This initializes the NeoPixel library.
+  strip.show(); // Initialize all pixels to 'off'
 }
 
 void loop() {
