@@ -3,7 +3,7 @@ l337_l4mp
 
 ## :construction: WORK IN PROGRESS. Does not function at this time! :construction:
 
-![Testing Gif] https://github.com/nathanbuckley/l1337_l4mp/readmeAssets/light.gif "LOADING"
+![Testing Gif] (https://raw.githubusercontent.com/nathanbuckley/1337_l4mp/master/readmeAssets/light.gif) "LOADING"
 
 > A wifi enabled RGB Desk lamp internals. Easly fitted in to any lamp project. Powered by an ESP8266 and a 12 LED NeoPixel ring.
 
