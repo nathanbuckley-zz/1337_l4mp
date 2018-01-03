@@ -3,7 +3,7 @@ l337_l4mp
 
 ## :construction: WORK IN PROGRESS. Does not function at this time! :construction:
 
-![Testing Gif] https://github.com/nathanbuckley/l337_l4mp/raw/master/readmeAssets/light.gif "LOADING"
+![Testing Gif] https://github.com/nathanbuckley/l1337_l4mp/readmeAssets/light.gif "LOADING"
 
 > A wifi enabled RGB Desk lamp internals. Easly fitted in to any lamp project. Powered by an ESP8266 and a 12 LED NeoPixel ring.
 
@@ -17,5 +17,3 @@ The Goal:
 - [ ]  Make it easy to install in any lamp project
 - [ ]  A Natral Light Alarm function (Slowly Brightens a white light to promote natral rising)
 - [ ] Standalone PCB version for devs and easier / more reliable implimentation  
-
-
