@@ -1,0 +1,5 @@
+# Logs
+*.log
+
+#vscode arduino board config bits
+.vscode

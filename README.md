@@ -5,11 +5,11 @@ l337_l4mp
 
 ![Testing Gif](https://raw.githubusercontent.com/nathanbuckley/1337_l4mp/master/readmeAssets/light.gif "LOADING")
 
-> A wifi enabled RGB Desk lamp internals. Easly fitted in to any lamp project. Powered by an ESP8266 and a 12 LED NeoPixel ring.
+> A wifi enabled RGB Desk lamp internals. Easly fitted in to any lamp project. Powered by an ESP8266 and a 12 LED NeoPixel ring. for now!!! 
 
 The Goal:
 
-- [x]  Must be powered over a USB connection
+- [ ]  Must be powered over a USB / 5v max connection
 - [ ]  Have a full web interface hoseted on an SD card
 - [ ]  Easy To configure and setup webserver
 - [ ]  Only accessable localy for security
