@@ -17,3 +17,7 @@ The Goal:
 - [ ]  Make it easy to install in any lamp project
 - [ ]  A Natral Light Alarm function (Slowly Brightens a white light to promote natral rising)
 - [ ] Standalone PCB version for devs and easier / more reliable implimentation  
+
+Arduino Libraries
+arduinoWebSockets - https://github.com/Links2004/arduinoWebSockets
+SD  - v1.2.0

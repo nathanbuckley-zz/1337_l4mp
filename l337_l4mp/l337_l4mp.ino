@@ -9,16 +9,18 @@
 #include <SPI.h>
 #include <SD.h>
 #include <Adafruit_NeoPixel.h>
+#include <WebSocketsServer.h>
 
 #define PIN  5
 #define NUMPIXELS  12
 #define DBG_OUTPUT_PORT Serial //Remove and make all DBG_OUTPUT_PORT Serial !!! 
 
 ESP8266WebServer server(80);
+WebSocketsServer webSocket = WebSocketsServer(81);    // create a websocket server on port 81
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
-const char* ssid = "*********";
-const char* password = "*********";
+const char* ssid = "VM7996373";
+const char* password = "qfQnzg3B6fvg";
 const char* host = "l337_l4mp";
 
 static bool hasSD = false;
@@ -83,6 +85,21 @@ void handleNotFound(){
   Serial.print(message);
 }
 
+void webSocketEvent(WStype_t type, uint8_t * payload, size_t lenght) { // When a WebSocket message is received
+  switch (type) {
+    case WStype_DISCONNECTED:   // if the websocket is disconnected
+      Serial.print("websocket Disconnected!\n", num);
+      break;
+    case WStype_CONNECTED: {   // if a new websocket connection is established
+        Serial.print("websocket connection is established \n");
+      }
+      break;
+    case WStype_TEXT:         // if new text data is received
+      Serial.print("Websocket Payload:", payload);
+      break;
+  }
+}
+
 // ------------------------------ LIGHT PATTERNS ---------------------------------
 
 
@@ -124,7 +141,7 @@ void cylon(){
 
 //------------------------------- SETUP --------------------------------------
 void setup() {
-  pixels.begin(); // This initializes the NeoPixel library.
+  pixels.begin(); // Initializes the NeoPixel library.
   Serial.begin(115200);
   Serial.setDebugOutput(true);
   Serial.print("\n");
@@ -162,11 +179,17 @@ void setup() {
      Serial.println("SD Card initialized.");
      hasSD = true;
   }
+
+  void startWebSocket() { // Start a WebSocket server
+    webSocket.begin();        // start the websocket server
+    webSocket.onEvent(webSocketEvent);  // if there's an incomming websocket message, go to function 'webSocketEvent'
+    Serial.println("WebSocket server started.");
+  }
 }
 
 
 // ------------------------------- LOOP ---------------------------------
 void loop() {
-  loadBlue();
+  webSocket.loop();                           // constantly check for websocket events
   server.handleClient();
 }
